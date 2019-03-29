@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {SampleService} from '../services/sample.service';
-
+import {StatusCodePipe} from '../pipes/status-code.pipe';
+import {StatusCode} from '../models/statusCode';
 
 @Component({
   selector: 'app-status-code',
@@ -11,7 +12,7 @@ export class StatusCodeComponent implements OnInit {
 
 
   title = 'SampleA';
-  data = 'adsf';
+  data: StatusCode[];
   constructor(private service: SampleService) {
     this.title = service.getTitle();
     this.data = service.getStatusCodes();

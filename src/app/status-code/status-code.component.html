@@ -1,6 +1,7 @@
-<div *ngFor="let item of data" (click)="myClickFunction()">
+<div *ngFor="let item of data | statusCode" (click)="myClickFunction()">
 {{item.code}}
-<p>
+  <!--{{STATUS_CODES | SampleCodePipe : json}} -->
+<p appHighLight>
   status-code works!
 </p>
 </div>
